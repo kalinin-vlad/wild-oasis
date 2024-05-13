@@ -27,6 +27,20 @@ const Box = styled.div`
   }
 `;
 
+const Button = styled.button`
+  list-style: none;
+  border: 1px solid var(--color-grey-700);
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  background: none;
+
+  &:hover {
+    color: var(--color-grey-0);
+    background-color: var(--color-grey-700);
+    transition: all 0.3s;
+  }
+`;
+
 function PageNotFound() {
   const moveBack = useMoveBack();
 
@@ -36,9 +50,9 @@ function PageNotFound() {
         <Heading as="h1">
           The page you are looking for could not be found 😢
         </Heading>
-        <button onClick={moveBack} size="large">
+        <Button onClick={moveBack} size="large">
           &larr; Go back
-        </button>
+        </Button>
       </Box>
     </StyledPageNotFound>
   );
