@@ -1,20 +1,20 @@
 import styled from "styled-components";
 import BookingDataBox from "../../features/bookings/BookingDataBox";
 
+import { useMoveBack } from "../../hooks/useMoveBack";
+import { useBooking } from "../bookings/useBooking";
+import { useState, useEffect } from "react";
+import { formatCurrency } from "../../utils/helpers";
+import { useCheckin } from "./useCheckin";
+import { useSettings } from "../settings/useSettings";
+
 import Row from "../../ui/Row";
 import Heading from "../../ui/Heading";
 import ButtonGroup from "../../ui/ButtonGroup";
 import Button from "../../ui/Button";
 import ButtonText from "../../ui/ButtonText";
-
-import { useMoveBack } from "../../hooks/useMoveBack";
-import useBooking from "../bookings/useBooking";
 import Spinner from "../../ui/Spinner";
 import Checkbox from "../../ui/Checkbox";
-import { useState, useEffect } from "react";
-import { formatCurrency } from "../../utils/helpers";
-import { useCheckin } from "./useCheckin";
-import { useSettings } from "../settings/useSettings";
 
 const Box = styled.div`
   /* Box */
