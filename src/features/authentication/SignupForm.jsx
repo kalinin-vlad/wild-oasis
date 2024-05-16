@@ -13,7 +13,7 @@ function SignupForm() {
   const { errors } = formState;
 
   function onSubmit({ email, password, fullName }) {
-    signup({ email, password, fullName }, { onSettled: reset() });
+    signup({ email, password, fullName }, { onSettled: () => reset() });
   }
 
   return (
@@ -75,7 +75,12 @@ function SignupForm() {
 
       <FormRow>
         {/* type is an HTML attribute! */}
-        <Button variation="secondary" type="reset" disabled={isLoading}>
+        <Button
+          variation="secondary"
+          type="reset"
+          disabled={isLoading}
+          onClick={reset}
+        >
           Cancel
         </Button>
         <Button>Create new user</Button>
