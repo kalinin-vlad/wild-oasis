@@ -30,7 +30,7 @@ function App() {
     <DarkModeProvider>
       <QueryClientProvider client={queryClient}>
         {/* <ReactQueryDevtools /> */}
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
           <Routes>
             <Route
               element={
